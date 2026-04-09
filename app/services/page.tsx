@@ -1,80 +1,76 @@
 import { FeaturesGrid } from '@/components/blocks/FeaturesGrid'
-import { FAQAccordion } from '@/components/blocks/FAQAccordion'
 import { CTASparkles } from '@/components/blocks/CTASparkles'
 
 export default function ServicesPage() {
   return (
-    <div>
+    <>
       <section className="py-20 md:py-28 px-4 md:px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          <div>
-            <p className="text-sm text-muted-foreground">Services</p>
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-5xl">
+            <p className="text-sm font-medium text-muted-foreground">Services</p>
             <h1 className="mt-3 text-4xl md:text-5xl font-bold tracking-tight">
-              Logistics services built for speed, scale, and certainty.
+              Logistics services built for global delivery.
             </h1>
-            <p className="mt-4 text-muted-foreground">
-              Choose the right mix of express, freight, and fulfillment—backed by tracking,
-              compliance support, and operational clarity. Whether you ship parcels daily or manage
-              multi-lane freight, we help you reduce exceptions and keep delivery promises.
+            <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
+              Express, freight, fulfillment, and returns—supported by tracking, documentation, and operational analytics.
+              Choose the service mix that matches your lanes, timelines, and shipment profiles, then scale with clearer
+              visibility and fewer exceptions.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-xl bg-primary text-primary-foreground px-5 py-3 text-sm font-semibold shadow-sm hover:shadow-md transition-shadow"
+                className="inline-flex items-center justify-center rounded-xl bg-primary px-5 py-3 text-primary-foreground font-semibold shadow-sm hover:shadow-md transition-shadow"
               >
-                Talk to a Specialist
+                Talk to an expert
               </a>
               <a
                 href="/pricing"
-                className="inline-flex items-center justify-center rounded-xl border px-5 py-3 text-sm font-semibold hover:shadow-md transition-shadow"
+                className="inline-flex items-center justify-center rounded-xl border px-5 py-3 font-semibold hover:shadow-sm transition-shadow bg-background"
               >
-                See Pricing
+                View pricing
               </a>
             </div>
-          </div>
-
-          <div className="rounded-xl border shadow-sm overflow-hidden bg-card">
-            {/* Using native img to avoid extra dependencies */}
-            <img
-              src="https://images.pexels.com/photos/7876662/pexels-photo-7876662.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              alt="Delivery van and packages in urban setting"
-              className="h-[320px] md:h-[420px] w-full object-cover"
-            />
           </div>
         </div>
       </section>
 
-      <section id="service-categories" className="py-20 md:py-28 px-4 md:px-8 bg-muted">
+      <section className="py-20 md:py-28 px-4 md:px-8 bg-muted">
         <div className="max-w-7xl mx-auto">
           <FeaturesGrid
-            badge="Core services"
-            headline="Core service categories"
-            subheadline="Pick a service lane, then tailor speed, coverage, and handling requirements. We’ll help you balance cost, transit time, and customer expectations."
+            badge="Core offerings"
+            headline="Choose the right service for your operation"
+            subheadline="From time-definite parcel to consolidated freight and multi-warehouse fulfillment, our services are designed to stay predictable under real-world conditions."
             features={[
               {
-                title: 'DHL Express',
+                title: 'Express Parcel',
                 description:
-                  'Time-definite international delivery with end-to-end tracking, delivery confirmation, and proactive exception handling.',
-                icon: 'Timer',
+                  'Time-definite delivery with end-to-end tracking, signature options, and proactive exception handling.',
               },
               {
-                title: 'DHL Freight',
+                title: 'Air & Ocean Freight',
                 description:
-                  'Road freight solutions for regional and cross-border shipping with predictable transit times and consistent milestones.',
-                icon: 'Truck',
+                  'Flexible freight solutions with consolidated options, milestone visibility, and predictable handoffs.',
               },
               {
-                title: 'DHL Global Forwarding',
+                title: 'Road Freight',
                 description:
-                  'Air and ocean freight forwarding with consolidation, routing optimization, and milestone visibility across lanes.',
-                icon: 'Ship',
+                  'Regional distribution with scheduled pickups, linehaul coordination, and clear ETAs for receivers.',
               },
               {
-                title: 'DHL Supply Chain',
+                title: 'Warehousing & Fulfillment',
                 description:
-                  'Warehousing, fulfillment, and value-added services to support growth, seasonal peaks, and multi-node distribution.',
-                icon: 'Boxes',
+                  'Pick/pack workflows, inventory visibility, and fast dispatch designed for e-commerce and D2C growth.',
+              },
+              {
+                title: 'Customs & Compliance',
+                description:
+                  'Documentation guidance and export/import readiness to reduce delays on common cross-border lanes.',
+              },
+              {
+                title: 'Returns Management',
+                description:
+                  'Customer-friendly returns labels, consolidated processing, and reporting that helps reduce return costs.',
               },
             ]}
           />
@@ -83,129 +79,102 @@ export default function ServicesPage() {
 
       <section id="how-it-works" className="py-20 md:py-28 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="max-w-3xl">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-              How shipping works with DHL
-            </h2>
-            <p className="mt-3 text-muted-foreground">
-              A simple, repeatable flow from quote to delivery—optimized for fewer exceptions and
-              clearer accountability at every step.
+          <div className="max-w-5xl">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">How it works</h2>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              A simple, repeatable flow for consistent delivery performance. Teams use this process to standardize
+              labeling and documentation, reduce avoidable exceptions, and improve on-time delivery across lanes.
             </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: '1) Quote & lane review',
-                description:
-                  'Share origin/destination, dimensions, and service level. We recommend the best option based on SLA, cost, and constraints.',
+                title: 'Plan',
+                description: 'Select service level, lanes, and pickup schedule based on timeline and cost targets.',
               },
               {
-                title: '2) Labeling & pickup',
-                description:
-                  'Generate labels, schedule pickup, and verify packaging requirements. For cross-border, confirm documentation before handoff.',
+                title: 'Ship',
+                description: 'Create labels, attach docs, and hand off at pickup with clear scan expectations.',
               },
               {
-                title: '3) In-transit tracking',
-                description:
-                  'Monitor milestones with proactive alerts. When exceptions occur, teams can act quickly with clear status updates.',
+                title: 'Track',
+                description: 'Monitor milestones and receive exception alerts when something deviates from plan.',
               },
               {
-                title: '4) Customs clearance (if needed)',
-                description:
-                  'Use documentation guidance and compliance checks to reduce clearance delays and prevent avoidable holds.',
-              },
-              {
-                title: '5) Delivery & proof',
-                description:
-                  'Delivery confirmation and proof of delivery support customer communication, claims handling, and SLA reporting.',
-              },
-              {
-                title: '6) Review & optimize',
-                description:
-                  'Use lane performance and spend visibility to tune service mix—improving on-time delivery while controlling cost.',
+                title: 'Deliver',
+                description: 'Capture proof of delivery and review performance reporting to improve future shipments.',
               },
             ].map((step) => (
               <div
                 key={step.title}
-                className="rounded-xl border bg-card p-6 shadow-sm hover:shadow-md transition-shadow"
+                className="rounded-xl border bg-background p-6 shadow-sm hover:shadow-md transition-shadow"
               >
-                <h3 className="font-semibold tracking-tight">{step.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{step.description}</p>
+                <h3 className="text-lg font-semibold tracking-tight">{step.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="integrations" className="py-20 md:py-28 px-4 md:px-8 bg-muted">
+      <section className="py-20 md:py-28 px-4 md:px-8 bg-muted">
         <div className="max-w-7xl mx-auto">
-          <FeaturesGrid
-            badge="Automation"
-            headline="Integrations & automation"
-            subheadline="Reduce manual work with platform connections and shipping rules—so teams can ship faster with fewer errors."
-            features={[
-              {
-                title: 'Automated label creation',
-                description:
-                  'Create labels from order data and apply service rules based on destination, promised delivery date, and handling requirements.',
-                icon: 'QrCode',
-              },
-              {
-                title: 'Tracking notifications',
-                description:
-                  'Send branded tracking links and delivery updates to customers automatically to reduce support volume and increase trust.',
-                icon: 'Bell',
-              },
-              {
-                title: 'Returns workflows',
-                description:
-                  'Generate return labels, route items to the right facility, and keep status visible from initiation to disposition.',
-                icon: 'Undo2',
-              },
-              {
-                title: 'Reporting exports',
-                description:
-                  'Export shipment data for finance and operations reviews—supporting forecasting, reconciliation, and SLA measurement.',
-                icon: 'FileDown',
-              },
-            ]}
-          />
-        </div>
-      </section>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div className="rounded-xl border bg-background shadow-sm overflow-hidden">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://images.pexels.com/photos/36712901/pexels-photo-36712901.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                alt="Logistics dashboard on a laptop with shipping analytics"
+                className="w-full h-[320px] md:h-[420px] object-cover"
+              />
+            </div>
 
-      <section className="py-20 md:py-28 px-4 md:px-8">
-        <div className="max-w-5xl mx-auto">
-          <FAQAccordion
-            headline="Services FAQ"
-            subheadline="Clarify service selection, timelines, and how we recommend the right mix."
-            items={[
-              {
-                question: 'How do I choose between express and freight?',
-                answer:
-                  'Use express for time-critical, smaller shipments where delivery date certainty matters most. Use freight/forwarding for bulk movement where cost optimization and consolidation provide the best value.',
-              },
-              {
-                question: 'Can you support seasonal peaks?',
-                answer:
-                  'Yes. Many teams combine fulfillment capacity planning with lane-based shipping rules to handle peak volume while maintaining on-time performance.',
-              },
-              {
-                question: 'Do you provide proactive exception alerts?',
-                answer:
-                  'Exception visibility is a core focus: tracking milestones and alerts help teams intervene early, communicate clearly, and reduce downstream support work.',
-              },
-            ]}
-          />
+            <div>
+              <p className="text-sm font-medium text-muted-foreground">Integrations</p>
+              <h2 className="mt-3 text-3xl md:text-4xl font-bold tracking-tight">Plug into your stack</h2>
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                Keep orders, tracking, and customer updates aligned across tools. In production, these capabilities are
+                typically delivered via API connectors, file-based workflows, or partner apps—this demo site simply
+                showcases what’s possible.
+              </p>
+
+              <div className="mt-8 grid grid-cols-1 gap-4">
+                {[
+                  {
+                    name: 'Shopify / WooCommerce',
+                    description: 'Auto-import orders and push tracking updates to customer notifications.',
+                  },
+                  {
+                    name: 'ERP (SAP / NetSuite)',
+                    description: 'Reference numbers, cost allocation, and reporting aligned to finance and ops.',
+                  },
+                  {
+                    name: 'Support (Zendesk)',
+                    description: 'Tracking links and delivery status embedded directly in customer tickets.',
+                  },
+                ].map((item) => (
+                  <div key={item.name} className="rounded-xl border bg-background p-5 shadow-sm">
+                    <div className="font-semibold tracking-tight">{item.name}</div>
+                    <div className="mt-1 text-sm text-muted-foreground leading-relaxed">{item.description}</div>
+                  </div>
+                ))}
+              </div>
+
+              <p className="mt-6 text-sm text-muted-foreground">
+                Note: No backend is used for this demo site—integrations are presented as capabilities.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       <CTASparkles
-        headline="Not sure which service fits?"
-        description="Tell us your lanes and volume—get a recommended plan in one conversation, with clear next steps and realistic timelines."
-        ctaLabel="Get Recommendations"
+        headline="Need a tailored logistics plan?"
+        description="Tell us your lanes, volumes, and timelines—we’ll recommend the best service mix for speed, cost, and reliability."
+        ctaLabel="Request a consultation"
         ctaHref="/contact"
       />
-    </div>
+    </>
   )
 }

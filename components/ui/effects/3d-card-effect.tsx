@@ -1,17 +1,10 @@
-"use client";
-
 import * as React from "react";
 
 type DivProps = React.HTMLAttributes<HTMLDivElement>;
 
-type CardItemProps = DivProps & {
-  translateZ?: number | string;
-  as?: keyof JSX.IntrinsicElements;
-};
-
 /**
- * Minimal 3D card effect components to satisfy imports.
- * These are intentionally lightweight wrappers.
+ * Minimal, build-safe 3D card effect components.
+ * Some templates import these named exports.
  */
 export function CardContainer({ className, ...props }: DivProps) {
   return <div className={className} {...props} />;
@@ -21,15 +14,21 @@ export function CardBody({ className, ...props }: DivProps) {
   return <div className={className} {...props} />;
 }
 
+export type CardItemProps = DivProps & {
+  translateZ?: number | string;
+  as?: keyof JSX.IntrinsicElements;
+};
+
 export function CardItem({ as, className, translateZ, style, ...props }: CardItemProps) {
   const Comp: any = as ?? "div";
-  const z = typeof translateZ === "number" ? `${translateZ}px` : translateZ;
   return (
     <Comp
       className={className}
       style={{
-        ...style,
-        transform: z ? `translateZ(${z})` : style?.transform,
+        ...(style ?? {}),
+        ...(translateZ != null
+          ? ({ transform: `translateZ(${typeof translateZ === "number" ? `${translateZ}px` : translateZ})` } as React.CSSProperties)
+          : null),
       }}
       {...props}
     />

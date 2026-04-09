@@ -10,34 +10,33 @@ const config: Config = {
         foreground: "hsl(var(--foreground))",
 
         card: "hsl(var(--card))",
+        border: "hsl(var(--border))",
+        ring: "hsl(var(--ring))",
 
         primary: {
           DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          foreground: "hsl(var(--primary-foreground))"
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          foreground: "hsl(var(--secondary-foreground))"
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
+          DEFAULT: "hsl(var(--accent))"
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-
-        border: "hsl(var(--border))",
-        ring: "hsl(var(--ring))",
+          foreground: "hsl(var(--muted-foreground))"
+        }
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-    },
+        lg: "0.75rem",
+        md: "calc(0.75rem - 2px)",
+        sm: "calc(0.75rem - 4px)"
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 };
 
 export default config;

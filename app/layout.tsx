@@ -7,9 +7,9 @@ import { FooterMultiColumn } from '@/components/blocks/FooterMultiColumn'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'DHL Logistics — Express Shipping, Freight & Fulfillment',
+  title: 'DHL Logistics — Modern Shipping, Tracking & Fulfillment',
   description:
-    'Modern DHL logistics website blueprint with animated hero effects, services, pricing, integrations, testimonials, FAQ, team section, and client-side contact form.',
+    'Fast, reliable shipping—powered by precision logistics. Express delivery, freight, and fulfillment with end-to-end tracking, clear pricing, and global coverage.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -25,42 +25,37 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             { label: 'About', href: '/about' },
             { label: 'Contact', href: '/contact' },
           ]}
-          ctaLabel="Get a Quote"
+          ctaLabel="Get a quote"
           ctaHref="/contact"
         />
         <main>{children}</main>
         <FooterMultiColumn
           brand="DHL Logistics"
-          description="Fast, reliable shipping and logistics—globally connected, locally precise. Explore express delivery, freight and forwarding, warehousing and fulfillment, and compliance-ready workflows designed for predictable outcomes."
+          description="Fast, reliable shipping—powered by precision logistics. Express, freight, fulfillment, and returns with tracking, documentation support, and operational visibility."
           columns={[
             {
-              title: 'DHL Logistics',
+              title: 'Services',
               links: [
                 { label: 'Services', href: '/services' },
                 { label: 'Pricing', href: '/pricing' },
+              ],
+            },
+            {
+              title: 'Company',
+              links: [
                 { label: 'About', href: '/about' },
                 { label: 'Contact', href: '/contact' },
               ],
             },
             {
-              title: 'Services',
+              title: 'Resources',
               links: [
-                { label: 'Express', href: '/services#service-categories' },
-                { label: 'Freight', href: '/services#service-categories' },
-                { label: 'Forwarding', href: '/services#service-categories' },
-                { label: 'Fulfillment', href: '/services#service-categories' },
-              ],
-            },
-            {
-              title: 'Contact',
-              links: [
-                { label: 'sales@dhl.example', href: '/contact#contact-form' },
-                { label: 'support@dhl.example', href: '/contact#contact-form' },
-                { label: '+1 (555) 123-4567', href: '/contact#contact-details' },
+                { label: 'FAQ', href: '/pricing#faq' },
+                { label: 'Tracking (demo)', href: '/services#how-it-works' },
               ],
             },
           ]}
-          copyright="© 2026 DHL Logistics. Demo website blueprint."
+          copyright="© 2026 DHL Logistics. Demo site blueprint."
         />
       </body>
     </html>

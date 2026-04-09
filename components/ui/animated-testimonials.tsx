@@ -1,5 +1,3 @@
-"use client";
-
 import * as React from "react";
 
 export type AnimatedTestimonial = {
@@ -15,17 +13,18 @@ export type AnimatedTestimonialsProps = {
 };
 
 /**
- * Minimal AnimatedTestimonials implementation to satisfy imports.
+ * Minimal, build-safe AnimatedTestimonials placeholder.
+ * Renders a simple list to satisfy imports during build.
  */
 export function AnimatedTestimonials({ testimonials, className }: AnimatedTestimonialsProps) {
   return (
     <div className={className}>
       {testimonials.map((t, idx) => (
-        <figure key={idx} className="space-y-2">
-          <blockquote className="text-sm leading-relaxed">{t.quote}</blockquote>
-          <figcaption className="text-xs opacity-80">
-            <span className="font-medium">{t.name}</span>
-            {t.designation ? <span> · {t.designation}</span> : null}
+        <figure key={idx}>
+          <blockquote>{t.quote}</blockquote>
+          <figcaption>
+            <div>{t.name}</div>
+            {t.designation ? <div>{t.designation}</div> : null}
           </figcaption>
         </figure>
       ))}
