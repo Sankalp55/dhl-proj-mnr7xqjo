@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* DHL Logistics palette (HSL derived from blueprint hex colors) */
+:root {
+  --radius: 0.75rem;
+
+  /* #FFFFFF */
+  --background: 0 0% 100%;
+  /* #333333 */
+  --foreground: 0 0% 20%;
+
+  /* #FFFFFF */
+  --card: 0 0% 100%;
+
+  /* #FFCC00 */
+  --primary: 48 100% 50%;
+  /* #333333 */
+  --primary-foreground: 0 0% 20%;
+
+  /* #D40511 */
+  --secondary: 356 95% 43%;
+  /* #FFFFFF */
+  --secondary-foreground: 0 0% 100%;
+
+  /* #D40511 */
+  --accent: 356 95% 43%;
+
+  /* #FFFFFF */
+  --muted: 0 0% 100%;
+  /* #333333 */
+  --muted-foreground: 0 0% 20%;
+
+  /* #FFCC00 */
+  --border: 48 100% 50%;
+  /* #D40511 */
+  --ring: 356 95% 43%;
+}
+
+/* Optional dark theme (project blueprint uses light mode; provided for completeness) */
+.dark {
+  --background: 0 0% 10%;
+  --foreground: 0 0% 98%;
+
+  --card: 0 0% 12%;
+
+  --primary: 48 100% 50%;
+  --primary-foreground: 0 0% 12%;
+
+  --secondary: 356 95% 50%;
+  --secondary-foreground: 0 0% 100%;
+
+  --accent: 356 95% 50%;
+
+  --muted: 0 0% 16%;
+  --muted-foreground: 0 0% 80%;
+
+  --border: 0 0% 22%;
+  --ring: 356 95% 50%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: Arial, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+      "Noto Sans", "Liberation Sans", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Arial Black", Arial, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+      "Helvetica Neue", "Noto Sans", "Liberation Sans", sans-serif;
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
